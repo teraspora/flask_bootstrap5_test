@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% if title %}
+        <title>
+            {{ title }}
+        </title>
+    {% else %}
+        <title>
+            Welcome, Earthlings...
+        </title>
+    {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+
+<body>
+    
+    <div class="text-primary">
+        Velvet Ginger: 
+        <a href="/index">Domicile</a>
+    </div>
+    <hr>
+    
+    {% block content %}
+    
+    {% endblock %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

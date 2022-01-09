@@ -1,0 +1,14 @@
+h2 {
+    color: #ff6464;
+    background-color: #002447;
+    border: 1px solid #000;
+    border-radius: 6px;
+    width: 20vw;
+    padding: 1vh;
+}
+
+table#mtable {
+    margin: auto;
+    max-width: 90vw;
+    border: 4px outset #000;
+}
