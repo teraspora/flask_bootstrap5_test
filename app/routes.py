@@ -2,12 +2,29 @@ from flask import render_template
 from app import app
 
 
-user = {
-    'id': '3722',
-    'name': 'John'
+users = {
+    'john': {
+        'id': '3722',
+        'name': 'John'
+    },
+    'loop': {
+        'id': '4896',
+        'name': 'Loop'
+    },
+    'zest': {
+        'id': '103',
+        'name': 'Zest'
+    },
+    'rind': {
+        'id': '664',
+        'name': 'Rind'
+    },
+    
 }
 
-@app.route('/')
 @app.route('/index')
-def index():
+@app.route('/')
+@app.route('/<name>')
+def index(name='john'):
+    user = users.get(name)
     return render_template('index.html', title='Raccoons and Cement', user=user)
