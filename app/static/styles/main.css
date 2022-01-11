@@ -1,3 +1,7 @@
+body {
+    background-color: #fff0e2;
+}
+
 h2 {
     color: #ff6464;
     background-color: #002447;
@@ -8,7 +12,32 @@ h2 {
 }
 
 table#mtable {
+    background-color: #fff;
+    --bg_stripe_a: #ffd5d5;
+    --bg_stripe_b: #abcdff;
     margin: auto;
     max-width: 90vw;
     border: 4px outset #000;
+}
+
+table#mtable tbody tr:nth-of-type(even) td:nth-of-type(odd) {
+    background-color: var(--bg_stripe_a);
+}
+
+table#mtable tbody tr:nth-of-type(odd) td:nth-of-type(even) {
+    background-color: var(--bg_stripe_a);
+}
+
+table#mtable tbody tr:nth-of-type(even) td:nth-of-type(even) {
+    background-color: var(--bg_stripe_b);
+}
+
+table#mtable tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
+    background-color: var(--bg_stripe_b);
+}
+
+table#mtable th {
+    width: 4vw;
+    background-color: #333;
+    color: #ffa142;
 }
